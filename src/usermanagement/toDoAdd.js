@@ -42,11 +42,14 @@ class ToDoAdd extends Component {
     }
 
     render() { 
+        
         return ( 
             <div id="overlay" className={classes.overlay} onClick={(e) => this.test(e)}>
                 <div className={classes.toDoAddContainer}>
-                        <p>New to do item</p>
-                        <input id="addNoteInput" autoFocus defaultValue={this.props.editNote && this.props.editObj.title} placeholder="add your todo" type="text" onChange={(e) => this.handleChange(e)} />
+
+                    <p>New to do item</p>
+
+                    <input id="addNoteInput" autoFocus defaultValue={this.props.editObj.title} placeholder="add your todo" type="text" onChange={(e) => this.handleChange(e)} />
 
                     {this.state.newTitle === "" ? (
                         <div className={classes.submitButtonError}>OK</div>

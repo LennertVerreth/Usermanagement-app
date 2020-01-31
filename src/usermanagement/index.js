@@ -368,7 +368,18 @@ class UserManagement extends Component {
                         <input type="text" className={this.state.openSearch ? "animatedInput open" : "animatedInput close"} placeholder="search" autoFocus="autofocus" onChange={(e) => this.search(e)}/>
                     </div>
                     <div id="navButton" className={this.state.openSearch ? "animatedButtons closee" : "animatedButtons openn"}>
-                        <button onClick={() => this.sortAsc()}><FontAwesome name={this.state.ascButton ? "sort-alpha-desc" : "sort-alpha-asc"}/></button>
+                        <button onClick={() => this.sortAsc()}>
+                            <div className={classes.ascBtn} >
+                                <FontAwesome name={this.state.ascButton ? "long-arrow-down" : "long-arrow-up"}/>
+                                {this.state.ascButton ?(
+                                    <p>A<br/>Z</p>
+                                ):(
+                                    <p>Z<br/>A</p>
+                                )}
+                            </div>
+                            
+
+                        </button>
                     </div>
                     <div className={this.state.openSearch ? "animatedButtons closee" : "animatedButtons openn"}>
                         {/* <button onClick={() => this.setState({addUser: !this.state.addUser, selectedUser: false, overlay: false})}><FontAwesome name="plus"/></button> */}
