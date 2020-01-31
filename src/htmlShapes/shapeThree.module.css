@@ -1,0 +1,88 @@
+.margin {
+    margin: 50px;
+}
+
+.container {
+    height: calc(100vh - 170px);
+    position: relative;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.divOne {
+    background-color: #71cbf9;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.divOne p {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+
+.upperDiv {
+    justify-content: flex-end;
+    height: 25%;
+    display: flex;
+    text-align: center;
+}
+
+.upperDiv p, .divFour p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.divTwo {
+    background-color: #ce8383;
+    width: calc(33% - 10px);
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+    position: relative;
+}
+
+.divThree {
+    background-color: #a0cb7f;
+    width: calc(33% - 10px);
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+    position: relative;
+}
+
+.lowerDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 66%;
+    height: 50%;
+}
+
+.divFour {
+    background-color: #dee1a1;
+    position: absolute;
+    width: 48%;
+    height: 50%;
+    border: 10px solid white;
+    z-index: 1;
+}
+
+.divFive {
+    background-color: #d3a7e2;
+    width: 100%;
+    height: 100%;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    position: relative;
+}
+
+.divFive p {
+    padding-left: 73%;
+    position: absolute;
+    top: calc(50% - 25px);
+}

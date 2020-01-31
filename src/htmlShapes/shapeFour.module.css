@@ -1,0 +1,83 @@
+.shapeFour {
+    color: white;
+    font-size: 46px;
+    font-weight: 700;
+    height: 100vh;
+    padding-top: 70px;
+}
+
+.divOne, .divTwo, .divThree, .divFour, .divFive {
+    height: 20%;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+}
+
+.divOne {
+    background-color: #71cbf9;
+}
+
+.divTwo {
+    background-color: #ce8383;
+}
+
+.divThree {
+    background-color: #a0cb7f;
+}
+
+.divFour {
+    background-color: #dee1a1 ;
+}
+
+.divFive {
+    background-color: #d3a7e2;
+}
+
+@media (min-width: 768px) {
+    .margin {
+        margin: 50px;
+    }
+
+    .shapeFour {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;  
+        height: calc(100vh - 170px);
+    }
+    
+    .divOne, .divTwo, .divThree, .divFour, .divFive {
+        justify-items: center;
+        align-items: center;
+        display: grid;
+        height: unset;
+    }
+    
+    .divOne {
+        grid-column: span 1;
+        grid-row: span 4;
+        background-color: #71cbf9;
+    }
+    
+    .divTwo {
+        grid-column: span 2;
+        grid-row: span 2;
+        background-color: #ce8383;
+    }
+    
+    .divThree {
+        grid-row: span 2;
+        background-color: #a0cb7f;
+    
+    }
+    
+    .divFour {
+        background-color: #dee1a1;
+    
+    }
+    
+    .divFive {
+        background-color: #d3a7e2;
+    }
+}
+

@@ -1,0 +1,226 @@
+
+/* algemene zaken en reusability */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    background-color: antiquewhite;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+button{
+    color:red;
+}
+
+/* button {
+    border: none;
+    color: #074e7c;
+    background: #f0efeb;
+    display: block;
+    outline: none;
+    cursor: pointer;
+} */
+
+/* main stuk  */
+
+
+.container {
+    width: 900px;
+    height: 850px;
+    background: linear-gradient(41deg, rgba(34,106,195,1) 0%, rgba(60,58,53,1) 100%);
+    margin: 50px auto;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.header {
+    width: 795px;
+    height: 100px;
+    float: right;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+
+.header-p {
+    margin-top: 22px;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.navbar {
+    width: 96px;
+    float: left;
+    height: 844px;
+    border: 3px solid white;
+}
+
+.navbar-buttons {
+    display: block;
+    font-size: 30px;
+    margin-left: 35px;
+    margin-top: 7px;
+    color: white;
+}
+
+.navbar-button-back {
+    float: right;
+    margin-right: 3px;
+    color: white;
+}
+
+.men-woman-button {
+    color: white;
+    border: 2px solid white;
+    height: 60px;
+    width: 60px;
+    margin: 10px 0px 0px 14px;    
+}
+
+.navbar-word {
+    text-align: center;
+    padding-top: 6px;
+}
+
+.navbar-number {
+    text-align: center;
+    padding-top: 2px;
+}
+
+.user-cards-container {
+    width: 775px;
+    height: 721px;
+    float: right;
+    padding: 10px;
+    overflow: auto;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+}
+
+.user-cards {
+    width: 45%;
+    margin: 0px 15px 15px 0px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #c0bca7;
+    box-shadow: 5px 5px 5px #c5c5d8;
+}
+
+.delete-button {
+    float: right;
+    font-size: 23px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 50%;
+}
+
+.button-user-card {
+    color: #074e7c;
+    background-color: #f0efeb;
+    border: 1px solid;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    margin: 14px 0px 0px 130px;
+}
+
+p.user-cards {
+    margin-left: 125px !important;
+}
+
+/* full profile  */
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 150, 0, 0.2);
+}
+
+.full-profile-container {
+    height: 470px;
+    width: 400px;
+    background: linear-gradient(41deg, rgba(91,78,94,1) 0%, rgba(63,124,198,1) 100%);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    padding: 10px;
+}
+/* new user  */
+
+.new-user-button {
+    float: right;
+}
+
+/* input[type=text] {
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+} */
+
+::placeholder {
+    color: white;
+}
+
+.new-user-submit {
+    width: 100%;
+    font-size: 29px;
+    padding: 5px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.new-user-img {
+    height: 150px;
+    width: 150px;
+    border: 1px solid white;
+}
+
+.form-p {
+    font-size: 21px;
+}
+
+.section-one {
+    margin-left: 170px;
+}
+
+.section-two {
+    margin-top: 39px;
+}
+
+.section-three {
+    margin-bottom: 21px;
+}
+
+.red {
+    color: pink;
+    border: 1px solid red !important;
+}

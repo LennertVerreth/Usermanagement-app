@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: #557a95;
+    width: 100%;
+    display: block;
+    padding-left: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.span {
+    /* padding-left: 10px; */
+    width: 100%;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+.mainNav ul, .responsiveNav ul {
+    z-index: 2;
+}
+
+.header {
+    background-color: #b0a295;
+    height: 70px;
+    color: #557a95;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 70px;
+    position: relative;
+}
+
+.mainNav, .responsiveNav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 50%;
+    float: right;
+    margin-right: 50px;
+}
+
+ul li {
+    width: 25%;
+    position: relative;
+}
+
+ul li ul {
+    display: block;
+    background-color: #b0a295;
+    line-height: 50px;
+    /* position: absolute; */
+    width: 100%;
+    min-width: 190px;
+    transition: height 1s;
+    height: 0;
+    overflow: hidden;
+}
+
+ul li:hover > ul {
+    height: 254px;
+}
+
+ul li:hover {
+    display: block;
+
+}
+
+ul li ul li {
+    width: inherit;
+    font-size: 20px;
+}
+
+.burger {
+    display: none;
+}
+
+.logo {
+    float: left;
+    margin-left: 50px;
+}
+
+@media (max-width: 786px) {
+
+    .burger {
+        display: block;
+        float: right;
+        margin-right: 50px;
+    }
+    
+    .mainNav {
+        display: none;
+    }
+
+    .responsiveNav {
+        display: block;
+        list-style: none;
+        position: absolute;
+        width: 45vw;
+        right: 0;
+        top: 70px;
+        background-color: #b0a295;
+        margin-right: 0;
+        line-height: 50px;
+        z-index: 5;
+    }
+
+    /* .responsiveNav ul {
+        position: relative;
+    } */
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li ul {
+        width: 100%;
+    }
+
+    /* ul li ul li {
+        padding-left: 10px;
+    } */
+
+    .span:hover {
+        background-color: #938e94;
+        cursor: pointer;
+    }
+    
+    ul li ul li:hover {
+        background-color: #938e94;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 786px) {
+    ul li:hover {
+        background-color: #938e94;
+        cursor: pointer;
+    }
+}
+

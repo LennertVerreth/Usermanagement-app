@@ -1,0 +1,156 @@
+/* general */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.svg {
+    margin-top: 10px;
+}
+
+.mainMenu {
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+.header {
+    display: flex;
+    background: #b0a295;
+    height: 70px;
+}
+
+a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* border */
+
+li {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #b0a295;
+}
+
+ul li ul li:last-of-type {
+    border-bottom: none;
+}
+
+ul li ul li:first-of-type {
+    border-top: 1px solid #b0a295;
+}
+
+/* paddings and color hovers */
+
+.link {
+    padding: 10px;
+}
+
+.link:hover {
+    background-color: #557a95;
+}
+
+.subLink {
+    padding: 10px 0px 10px 20px;
+}
+
+.subLink:hover {
+    background-color: #5d5c61;
+}
+
+/* effects */
+
+.mainNav, .responsiveNav {
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    height: 0px;
+    background-color: grey;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+}
+
+.responsiveNav {
+    height: calc(100vh - 70px);
+}
+
+ul li ul {
+    height: 0px;
+    transition: height 1s ease-in-out;
+    overflow: hidden;
+}
+
+ul li:hover > ul {
+    cursor: pointer;
+    height: 239px;
+    transition: height 1s ease-in-out;
+}
+
+@media (min-width: 768px){
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        width: 25%;
+        text-align: center;
+        border: none;
+        height: 70px;
+    }
+
+    ul li ul {
+        background-color: #b0a295;
+        width: 100%;
+        min-width: 190px;
+    }
+
+    ul li ul li {
+        width: 100%;
+        text-align: left;
+        height: unset;
+    }
+
+    ul li ul li:first-of-type {
+        border-top: none;
+    }
+
+    .link {
+        padding: 0;
+        height: 100%;
+        line-height: 70px;
+    }
+
+    .subLink {
+        padding: 10px 12px 10px 12px;
+    }
+
+    .responsiveNav, .mainNav {
+        transition: none;
+        background-color: unset;
+        position: absolute;
+        /* position: fixed; */
+        display: flex;
+        width: 50%;
+        top: 0;
+        right: 30px;
+        overflow: visible;
+    }
+
+    body {
+        overflow: initial !important;
+    }
+
+    ul li:hover > ul {
+        cursor: pointer;
+        height: 233px;
+        transition: height 1s ease-in-out;
+    }
+}

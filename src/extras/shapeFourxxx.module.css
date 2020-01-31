@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.margin {
+    margin: 50px;
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 10px;
+    position: relative;
+}
+
+.floatLeft {
+    float: left;
+    height: 100%;
+    width: 66%;
+}
+
+.leftDiv {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.divOne {
+    background-color: #71cbf9;
+    width: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.smallDiv {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    text-align: center;
+    background-color: #0000004a;
+    height: 13%;
+    width: 20%;
+}
+
+.divTwo {
+    background-color: #ce8383;
+    width: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floatRight {
+    float: right;
+    width: 34%;
+    height: 100%;
+}
+
+.rightDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.divThree {
+    background-color: #a0cb7f;
+    flex-grow: 45;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divFour {
+    background-color: #dee1a1;
+    flex-grow: 24;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divFive {
+    background-color: #d3a7e2;
+    flex-grow: 21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divSix {
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 8%;
+    opacity: 0.5;
+    color: black;
+    text-align: center;
+}
+
+.divSix p {
+    position: absolute;
+    left: 30%;
+    top: 43%;
+}

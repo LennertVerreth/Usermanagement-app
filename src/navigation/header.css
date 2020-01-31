@@ -1,0 +1,141 @@
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.mainHeader {
+  display: flex;
+  background: #b0a295;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.logoLink {
+  width: 70px;
+  height: 70px;
+}
+
+.logo {
+  margin: 10px 0px 0px 6px
+}
+
+.mainNav li, .responsiveNav li {
+  width: 25%;
+  text-align: center;
+}
+
+ul li ul li {
+  width: 100% !important;
+}
+
+ul li ul li:last-of-type {
+  border-bottom: none;
+}
+
+.responsiveNav, .mainNav {
+  display: flex;
+}
+
+/* borders and effects */
+
+.mainHeader li {
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid #b0a295;
+}
+
+ul li ul {
+  height: 0px;
+  transition: height 1s ease-in-out;
+  overflow: hidden;
+  transform: translate(30px, -12px);
+  background-color: #dedede;
+  min-width: 200px;
+}
+
+ul li:hover > ul {
+  cursor: pointer;
+  height: 239px;
+  transition: height 1s ease-in-out;
+}
+
+/* paddings and color hovers */
+
+.link {
+  padding: 20px 10px 10px 10px;
+  margin: 0;
+  height: 70px;
+}
+
+.link:hover {
+  /* background-color: #557a95; */
+  /* transition: background-color 1s ease-in-out; */
+  color: white;
+}
+
+.subLink {
+  padding: 10px 0px 10px 20px;
+  text-align: left;
+  width: 100% !important;
+}
+
+.subLink:hover {
+  background-color: #5d5c61;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 768px){
+
+  ul li ul li:first-of-type {
+    border-top: 1px solid #b0a295;
+  }
+
+  ul li ul {
+    transform: none;
+    background-color:#b0a295;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+  }
+
+  .mainHeader {
+    display: block;
+  }
+
+  .mainHeader li {
+    width: 100%;
+    text-align: left;
+    background-color: grey; 
+  }
+
+  .mainNav, .responsiveNav {
+    display: block;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    height: 0px;
+    background-color: grey;
+  }
+
+  .responsiveNav {
+      height: 100vh;
+  }
+
+  .link:hover {
+    background-color: #557a95;
+  }
+}

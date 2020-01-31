@@ -1,4 +1,6 @@
-body {
+* {
+  box-sizing: border-box;
+  padding:0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -7,7 +9,227 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input, button, select{outline:none;}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
+}
+
+.animatedInput{
+  transition: width 1s ease-in-out;
+  transition-delay: 0.2s;
+  position: relative;
+  top:-4px;
+  height:22px;
+  border: none;
+  padding: 0 !important;
+  margin-left: 6px;
+}
+
+.open{
+  width:170px;
+}
+
+.close{
+  width:0;
+  border:none;
+}
+
+.animatedButtons {
+  transition: opacity 0.3s;
+}
+
+.openn {
+  transition-delay: 1.2s;
+  opacity: 1;
+  display:block;
+}
+
+.closee {
+  opacity: 0;
+}
+
+#navButton {
+  margin-right: 10px;
+}
+
+.red {
+  border: 1px solid red;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
+/* todo animation */
+
+.toDoUp {
+  border: none;
+  font-size: 14px;
+  padding: 4px 0px 4px 10px;
+  visibility: hidden;
+  transform: translateY(-32px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.toDoDown {
+  font-size: 14px;
+  padding: 4px 0px 4px 10px;
+  border: none;
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 1s ease;
+  margin-bottom: 10px;
+}
+
+.toDoUpItems {
+  transform: translateY(-32px);
+  transition: transform 1s;
+}
+
+.toDoDownItems {
+  transform: translateY(0px);
+  transition: transform 1s;
+}
+
+/* tabs */
+
+.tabsUl {
+  display: flex;
+  /* width: 100%; */
+}
+
+.btn{
+  width: 23%;
+  height: 38px;
+  text-align:center;
+}
+
+.activeTab .outerDiv {
+  background-color: #797570;
+}
+.activeTab .innerDiv{
+  background-color: #b0a295;
+  border-radius: 15px 15px 0 0 ;
+}
+
+.outerDiv {
+  height: inherit;
+  background-color: #b0a295;
+}
+
+.innerDiv {
+  height: inherit;
+  background-color: #797570;
+  font-size: 26px;
+}
+
+.innerDivRight {
+  background-color: #797570;
+  border-radius:0 0 0 15px;
+}
+
+.innerDivLeft {
+  background-color: #797570;
+  border-radius:0 0 15px 0;
+}
+
+@media (min-width: 768px){
+  .btn {
+    width: 25%;
+  }
+}
+
+/* todo */
+
+.normal {
+  width: 85%;
+  /* transition: width 1s; */
+}
+
+.edit {
+  width: 85%;
+  /* transition: width 1s; */
+}
+
+.normall {
+  width: 12%;
+  float: right;
+  transform: translateX(80px);
+  transition: transform 1s ease-in-out;
+  /* opacity: 0; */
+  /* transition: opacity 2s; */
+  /* display: none; */
+  /* transition-delay: opacity 1s; */
+}
+
+.editt {
+  width: 12%;
+  float: right;
+  transform: translateX(0px);
+  transition: transform 1s ease-in-out;
+  /* opacity: 1; */
+  /* display: block; */
+  /* transition: opacity 2s; */
+}
+
+@media (min-width: 600px){
+  .normall {
+    width: 8%;
+  }
+
+  .editt {
+    width: 8%;
+  }
+}
+
+.toDoHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toDoItem {
+  position: relative; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  transform: translateX(0px);
+  transition: transform 2s;
+}
+
+.toDoItem.beGone {
+  transform: translateX(500px);
+}
+
+.toDoItem input[type=checkbox]{
+  display: none;
+}
+
+.toDoItem p {
+  font-size: 18px !important;
+  margin: 0px 0px 0px 10px;
+}
+
+.toDoItem:nth-child(even) {
+  background-color: #797570;
+}
+
+.toDoAddButton{
+  margin-right: 10px;
+}
+
+.toDoDeleteButton {
+  margin-right: 10px;
+}
+
+
+.react-datepicker-wrapper{width: 100%;}
+
+.react-datepicker__input-container input{
+  padding: 4px 0px 4px 12px;
+  width: 100%;
 }
