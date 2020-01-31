@@ -21,7 +21,6 @@ class UserManagement extends Component {
                     {name: "ToDo",open: "openToDo", fontAwesome: "check"},
                     {name: "Album", open: "openAlbum", fontAwesome: "picture-o"},
                     {name: "Messages", open: "openMessages", fontAwesome: "comment-o"},
-                    // {name: "lol", open: "lol", fontAwesome: "comment"}  
                 ],
             selectedUser: {},
 
@@ -48,14 +47,12 @@ class UserManagement extends Component {
 
     componentDidUpdate(prevProps, prevState){
 
-        // console.log("cdu index state:",this.state)
-
-        // console.log("SU", this.state.selectedUser)
         if(this.state.users !== prevState.users){
             if(this.state.users !== undefined && this.state.users.length > 0){
                 this.getTotals()
             }
         }
+
     }
 
     async getUsers(){
@@ -114,16 +111,13 @@ class UserManagement extends Component {
     }
 
     showUser = (x) => {
-
-        // console.log("showuser:",x)
-
+        console.log("showUser:", x)
         this.close()
 
         let toDoId = this.state.dictionary.filter(item => item.uuid === x).map(item => item.userId)[0]
 
         this.setState({
             selectedUser: this.state.users.find(user => user.login.uuid === x),
-            // addUser: false,
             overlay: true,
             openProfile: true,
             toDoId: toDoId,
@@ -172,11 +166,6 @@ class UserManagement extends Component {
             ascButton: !this.state.ascButton
         })
     }
-
-
-
-
-
 
     submitData = (formObj, date) => {
 
@@ -253,18 +242,14 @@ class UserManagement extends Component {
         this.close()
     }
 
-
-
-
     setLocalStorage(localstorageKey, localStorageValue){
 
         localStorage.setItem(localstorageKey, JSON.stringify(localStorageValue))
     }
 
     delete = (e, objectid) =>{
-        e.stopPropagation();
 
-        // console.log(objecid)
+        e.stopPropagation();
 
         let deleteArray = [...this.state.users]
 
@@ -275,8 +260,6 @@ class UserManagement extends Component {
         const deleteIndex = (deleteArray.findIndex(isLargeNumber));
 
         deleteArray.splice(deleteIndex, 1)
-
-        // localStorage.setItem('users', JSON.stringify(deleteArray))
 
         this.setLocalStorage('users',deleteArray)
 
@@ -300,6 +283,7 @@ class UserManagement extends Component {
     }
 
     switchTabs = (data) => {
+
         this.setState({
             overlay: true,
         })
@@ -312,8 +296,6 @@ class UserManagement extends Component {
         all[1].classList.remove("innerDivRight", "innerDivLeft")
         all[2].classList.remove("innerDivRight", "innerDivLeft")
         all[3].classList.remove("innerDivRight", "innerDivLeft")
-
-        
 
         switch (data) {
             case "Profile":
@@ -367,8 +349,9 @@ class UserManagement extends Component {
     }
 
     render() { 
-        
+
         return (  
+
             <div className={classes.root}>
                 <h1>User Management</h1>
                 <div className={classes.totalDiv}>
@@ -407,11 +390,6 @@ class UserManagement extends Component {
                         </React.Fragment>
                         
                     </div>
-
-                   {/* {this.state.addUser &&
-                        <Form submitData={this.submitData} close={() => this.close() }/>                         
-                    } */}
-                        
 
                         {this.state.overlay &&
 

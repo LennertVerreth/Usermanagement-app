@@ -25,22 +25,22 @@ class FormInput extends Component {
         
 
         return ( 
-            <div>
+            <div className={classes.group}>
                 <label className={classes.label} htmlFor={this.props.name}> {this.props.placeholder} {this.props.error && "*"}</label>
                 
                 {this.props.edit === false ?
-                <div>{this.props.value}</div>
+                    <div>{this.props.value}</div>
                 :
-                <input 
-                    className={this.props.error ? classes.redInput : classes.input} 
-                    type="text" 
-                    id={this.props.name} 
-                    name={this.props.name} 
-                    value={this.props.value} 
-                    placeholder={this.props.placeholder} 
-                    onChange={this.props.newUserData} 
-                    onBlur={() => this.test()}
-                />
+                    <input 
+                        className={this.props.error ? classes.redInput : classes.input} 
+                        type="text" 
+                        id={this.props.name} 
+                        name={this.props.name} 
+                        value={this.props.value} 
+                        placeholder={this.props.placeholder} 
+                        onChange={this.props.newUserData} 
+                        onBlur={() => this.test()}
+                    />
                 }
             </div>
 
